@@ -1,0 +1,12 @@
+// Import React and React-dom.
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Import the components.
+import { Overview } from './components/overview';
+
+// Define the root element.
+const root = document.querySelector('#app');
+
+// Append the DummyComponent to the root element.
+ReactDOM.render(<Overview />, root);

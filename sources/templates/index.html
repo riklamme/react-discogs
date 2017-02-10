@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discogs React</title>
+    <link rel="stylesheet" href="resources/styles/app.css">
+</head>
+
+<body>
+    <div class="collapse bg-inverse" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Rik Lamme: Frontend Developer in Heart and Kidneys</p>
+                    <p class="text-muted">Big high 5 to: <a href="https://github.com/yamafaktory/babel-react-rollup-starter" target="_blank">yamafaktory</a></p>
+                </div>
+                <div class="col-sm-4 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://twitter.com/riklamme" class="text-white" target="_blank">Follow on Twitter</a></li>
+                        <li><a href="https://twitter.com/furiousm" class="text-white" target="_blank">Follow FuriousM on Twitter</a></li>
+                        <li><a href="https://github.com/riklamme" class="text-white" target="_blank">Watch my Github</a></li>
+                        <li><a href="mailto:rik@striktdevelopment.nl" class="text-white">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-inverse bg-inverse">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand">Discogs React</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Discogs React</h1>
+            <p class="lead text-muted">A simple boilerplate for web apps with React, Babel, and Rollup</p>
+            <p>
+                <a href="#" class="btn btn-primary">Main call to action</a>
+                <a href="#" class="btn btn-secondary">Secondary action</a>
+            </p>
+        </div>
+    </section>
+    <div class="album text-muted">
+        <div class="container">
+
+            <!-- React -->
+            <main id="app"></main>
+            <!-- ./React -->
+
+            <div class="row">
+                <div class="card">
+                    <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card">
+                    <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card">
+                    <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+    <script>
+      $(function () {
+        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+      });
+    </script>
+    <!-- React js -->
+    <script src="resources/scripts/app.js"></script>
+    <!-- ./React js -->
+</body>
+
+</html>
