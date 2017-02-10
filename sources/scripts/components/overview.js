@@ -11,17 +11,17 @@ export class Overview extends React.Component {
 
 	componentWillMount() {
 		fetch('https://api.discogs.com/database/search?artist=luca debonaire&key=wqUQvwNxoRghPSAqSnrc&secret=eTbhihtyFJNVhvZfRDXvTTGMGguRRsyL')
-			.then(function(response) {
+			.then((response) => {
 				return response.json()
-			}).then(function(json) {
+			}).then((json) => {
 				console.log('parsed json', json)
 
 				this.setState({
 					records: json.results
 				});
-			}).catch(function(ex) {
+			}).catch((ex) => {
 				console.log('parsing failed', ex)
-			})
+			});
 	}
 
 	render () {
