@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import RecordsContainer from './records-container';
 
-export class Overview extends React.Component {
+export class App extends React.Component {
 	constructor() {
 		super();
-	}
 
-	state = {
-		records: {}
-	};
+		this.state = {
+			records: {}
+		}
+	}
 
 	componentWillMount() {
 		fetch('https://api.discogs.com/database/search?artist=luca debonaire&key=wqUQvwNxoRghPSAqSnrc&secret=eTbhihtyFJNVhvZfRDXvTTGMGguRRsyL')
@@ -26,10 +27,7 @@ export class Overview extends React.Component {
 
 	render () {
 		return (
-			<article>
-				<h1>Here comes the overview</h1>
-				<em>All the records in cards.</em>
-			</article>
+			<RecordsContainer records={this.state.records} />
 		)
 	}
 }
