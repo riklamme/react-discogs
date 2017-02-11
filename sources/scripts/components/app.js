@@ -6,7 +6,7 @@ export class App extends React.Component {
 		super();
 
 		this.state = {
-			records: {}
+			records: []
 		}
 	}
 

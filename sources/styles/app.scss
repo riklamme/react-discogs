@@ -56,18 +56,33 @@ body {
 
 .card {
   float: left;
-  width: 33.333%;
-  padding: .75rem;
-  margin-bottom: 2rem;
+  width: 25%;
+  // width: 33.333%;
+  padding: .5rem;
+  margin-bottom: .5rem;
   border: 0;
+  background: none;
 }
 
-.card > img {
-  margin-bottom: .75rem;
+.card-img-crop {
+  position: relative;
+  margin: 0;
 }
+
+.card-img-crop .card-img-top {
+  width: 100%;
+}
+
+// .card > img {
+//   margin-bottom: .75rem;
+// }
 
 .card-text {
   font-size: 85%;
+}
+
+.card-block {
+  background: #fff;
 }
 
 footer {
