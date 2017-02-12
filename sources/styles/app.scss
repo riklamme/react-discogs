@@ -51,7 +51,7 @@ body {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
+  background-color: $body-bg;
 }
 
 .card {
@@ -78,7 +78,20 @@ body {
 // }
 
 .card-text {
-  font-size: 85%;
+  font-size: 100%;
+}
+
+.card-text > .artist,
+.card-text > .track {
+  display: block;
+}
+
+.card-text > .artist {
+  
+}
+
+.card-text > .track {
+  font-weight: 600;
 }
 
 .card-block {

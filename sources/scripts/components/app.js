@@ -1,12 +1,14 @@
 import React from 'react';
 import RecordsContainer from './records-container';
 
-export class App extends React.Component {
+class App extends React.Component {
 	constructor() {
 		super();
+		// this.addLiked = this.addLiked.bind(this);
 
 		this.state = {
-			records: []
+			records: [],
+			liked: []
 		}
 	}
 
@@ -15,7 +17,7 @@ export class App extends React.Component {
 			.then((response) => {
 				return response.json()
 			}).then((json) => {
-				console.log('parsed json', json)
+				// console.log('parsed json', json)
 
 				this.setState({
 					records: json.results
@@ -25,9 +27,31 @@ export class App extends React.Component {
 			});
 	}
 
+	// addLiked(key) {
+	//     // take a copy of our state
+	//     const liked = {...this.state.liked};
+	//     // update or add the new number of fish ordered
+	//     // order[key] = order[key] + 1 || 1;
+	//     // update our state
+	//     this.setState({ liked });
+	// }
+
+	handleClick(item) {
+		console.log(item);
+		let liked = this.state.liked.slice();
+		liked.push(item);
+		this.setState({ liked: liked });
+	}
+
 	render () {
 		return (
-			<RecordsContainer records={this.state.records} />
+			<RecordsContainer records={this.state.records} onClick={(id) => this.handleClick(id)} />
 		)
 	}
 }
+
+// App.propTypes = {
+//   params: React.PropTypes.object.isRequired
+// }
+
+export default App;
