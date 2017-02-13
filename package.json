@@ -1,7 +1,7 @@
 {
-  "name": "babel-react-rollup-starter",
-  "version": "1.13.4",
-  "title": "babel-react-rollup-starter",
+  "name": "react-discogs",
+  "version": "1.0.0",
+  "title": "react-discogs",
   "description": "A simple boilerplate for web apps with React, Babel, and Rollup.",
   "keywords": [
     "Babel",
@@ -10,15 +10,15 @@
     "Rollup",
     "StandardJS"
   ],
-  "homepage": "https://github.com/yamafaktory/babel-react-rollup-starter",
+  "homepage": "http://www.striktdevelopment.nl/project/react/",
   "author": {
-    "name": "Davy Duperron",
-    "url": "https://github.com/yamafaktory"
+    "name": "Rik Lamme",
+    "url": "https://github.com/riklamme"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yamafaktory/babel-react-rollup-starter"
+    "url": "https://github.com/riklamme/react-discogs"
   },
   "engines": {
     "npm": ">=3.0.0",
