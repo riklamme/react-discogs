@@ -1,14 +1,14 @@
 import React from 'react';
 import RecordsContainer from './records-container';
+import AccountContainer from './account-container';
 
 class App extends React.Component {
 	constructor() {
 		super();
-		// this.addLiked = this.addLiked.bind(this);
 
 		this.state = {
 			records: [],
-			liked: []
+			wishlist: {}
 		}
 	}
 
@@ -27,25 +27,19 @@ class App extends React.Component {
 			});
 	}
 
-	// addLiked(key) {
-	//     // take a copy of our state
-	//     const liked = {...this.state.liked};
-	//     // update or add the new number of fish ordered
-	//     // order[key] = order[key] + 1 || 1;
-	//     // update our state
-	//     this.setState({ liked });
-	// }
-
-	handleClick(item) {
+	addToWishlist(item) {
 		console.log(item);
-		let liked = this.state.liked.slice();
-		liked.push(item);
-		this.setState({ liked: liked });
+		let wishlist = this.state.wishlist;
+		wishlist[item.id] = item;
+		this.setState({ wishlist: wishlist });
 	}
 
 	render () {
 		return (
-			<RecordsContainer records={this.state.records} onClick={(id) => this.handleClick(id)} />
+			<div className="row">
+				<RecordsContainer records={this.state.records} triggerAddToWishlist={(item) => this.addToWishlist(item)} />
+				<AccountContainer wishlist={this.state.wishlist} triggerAddToWishlist={(item) => this.addToWishlist(item)} />
+			</div>
 		)
 	}
 }

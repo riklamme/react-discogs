@@ -6,8 +6,8 @@ class RecordsContainer extends React.Component {
 		const records = this.props.records;
 
 		return (
-			<div className="row">
-				{records.map(record => <RecordItem key={record.id} recordId={record.id} record={record} addToLiked={this.addLiked} onClick={(id) => this.props.onClick(id)} />)}
+			<div className="col-9">
+				{records.map(record => <RecordItem key={record.id} recordId={record.id} record={record} triggerAddToWishlist={(item) => this.props.triggerAddToWishlist(item)} />)}
 			</div>
 		)
 	}

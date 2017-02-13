@@ -1,6 +1,6 @@
 import React from 'react';
 
-class RecordItem extends React.Component {
+class RecordList extends React.Component {
     render() {
         const { record, recordId } = this.props;
         const recordTitle = (title) => {
@@ -15,11 +15,11 @@ class RecordItem extends React.Component {
         }
 
         return (
-            <div className="card" key={record.id}>
-                <figure className="card-img-crop">
-                    <img className="card-img-top" src={record.thumb} alt={record.title} />
-                </figure>
+            <div className="card type-list" key={record.id}>
                 <div className="card-block">
+                    <figure className="card-img-crop">
+                        <img src={record.thumb} alt={record.title} />
+                    </figure>
                     {recordTitle(record.title)}
                     <p className="card-text">
                         <small className="text-muted">
@@ -29,21 +29,11 @@ class RecordItem extends React.Component {
                 </div>
                 <div className="card-footer">
                     <span className="badge badge-default">{record.style}</span>
-                    <button className="btn btn-outline-primary btn-sm float-right" type="button" onClick={() => this.props.triggerAddToWishlist(record)}>
-                        <i className="fa fa-heart" aria-hidden="true"></i>
-                    </button>
                 </div>
             </div>
         )
     }
+
 }
 
-//this.props.addToLiked(recordId)
-
-// RecordItem.propTypes = {
-//   record: React.PropTypes.object.isRequired,
-//   recordId: React.PropTypes.number.isRequired,
-//   addToLiked: React.PropTypes.func.isRequired
-// };
-
-export default RecordItem;
+export default RecordList;
