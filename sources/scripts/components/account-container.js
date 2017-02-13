@@ -10,7 +10,6 @@ class AccountContainer extends React.Component {
 
 	renderItem(key) {
 		const record = this.props.wishlist[key];
-		console.log(record);
 		
 		return (
 			<RecordList key={record.id} recordId={record.id} record={record} />
@@ -21,8 +20,8 @@ class AccountContainer extends React.Component {
 		const wishlistItems = Object.keys(this.props.wishlist);
 
 		return (
-			<div className="col-3">
-				<h1>Account</h1>
+			<div className="account-container col-3">
+				<h3>Wishlist</h3>
 				{wishlistItems.map(this.renderItem)}
 			</div>
 		)

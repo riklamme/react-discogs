@@ -18,7 +18,6 @@ class App extends React.Component {
 				return response.json()
 			}).then((json) => {
 				// console.log('parsed json', json)
-
 				this.setState({
 					records: json.results
 				});
@@ -28,7 +27,6 @@ class App extends React.Component {
 	}
 
 	addToWishlist(item) {
-		console.log(item);
 		let wishlist = this.state.wishlist;
 		wishlist[item.id] = item;
 		this.setState({ wishlist: wishlist });
