@@ -38,6 +38,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.16.0",
+    "bootstrap": "4.0.0-alpha.6",
     "browser-sync": "^2.18.7",
     "bs-html-injector": "^3.0.3",
     "chalk": "^1.1.3",

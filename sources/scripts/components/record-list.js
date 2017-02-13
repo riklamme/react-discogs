@@ -21,13 +21,6 @@ class RecordList extends React.Component {
                         <img src={record.thumb} alt={record.title} />
                     </figure>
                     {recordTitle(record.title)}
-                    <p className="card-text">
-                        <small className="text-muted">
-                            {record.label}
-                        </small>
-                    </p>
-                </div>
-                <div className="card-footer">
                     <span className="badge badge-default">{record.style}</span>
                     <button className="btn btn-outline-secondary btn-sm float-right" type="button" onClick={() => this.props.triggerRemoveFromWishlist(record.id)}>
                         <i className="fa fa-trash" aria-hidden="true"></i>
