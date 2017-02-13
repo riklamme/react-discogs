@@ -66,7 +66,7 @@ const run = (task, file) => {
         case 'scripts': {
             log(chalk.green(`[watch]: Run => [scripts]`));
             // exec(`shell-exec --colored-output --quiet 'npm run scripts -s'`);
-            exec(`npm run scripts --colors`);
+            exec(`npm run webpack:build --colors`);
             // exec(`npm run scripts:bundle -s -- --bundle ${path[1]} --colors`);
             break;
         }

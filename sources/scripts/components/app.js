@@ -1,6 +1,21 @@
+/*
+ * Import node modules
+ */
 import React from 'react';
+import Rebase from 're-base';
+
+/*
+ * Import components
+ */
 import RecordsContainer from './records-container';
 import AccountContainer from './account-container';
+
+
+const firebase = Rebase.createClass({
+  apiKey: "AIzaSyAkkEqs6WSSSDX2QdXVT0S-MSlT7ohnpPM",
+  authDomain: "react-discogs.firebaseapp.com",
+  databaseURL: "https://react-discogs.firebaseio.com",
+});
 
 class App extends React.Component {
 	constructor() {
@@ -24,6 +39,16 @@ class App extends React.Component {
 			}).catch((ex) => {
 				console.log('parsing failed', ex)
 			});
+
+	    // this runs right before the <App> is rendered
+	    this.db = firebase.syncState(`riklamme/wishlist`, {
+	      context: this,
+	      state: 'wishlist'
+	    });
+	}
+
+	componentWillUnmount() {
+		firebase.removeBinding(this.db);
 	}
 
 	addToWishlist(item) {
