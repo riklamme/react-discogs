@@ -38,12 +38,4 @@ class RecordItem extends React.Component {
     }
 }
 
-//this.props.addToLiked(recordId)
-
-// RecordItem.propTypes = {
-//   record: React.PropTypes.object.isRequired,
-//   recordId: React.PropTypes.number.isRequired,
-//   addToLiked: React.PropTypes.func.isRequired
-// };
-
 export default RecordItem;

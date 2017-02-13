@@ -29,6 +29,9 @@ class RecordList extends React.Component {
                 </div>
                 <div className="card-footer">
                     <span className="badge badge-default">{record.style}</span>
+                    <button className="btn btn-outline-secondary btn-sm float-right" type="button" onClick={() => this.props.triggerRemoveFromWishlist(record.id)}>
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
         )

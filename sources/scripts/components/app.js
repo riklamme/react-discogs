@@ -5,17 +5,15 @@ import React from 'react';
 import Rebase from 're-base';
 
 /*
+ * Import scripts
+ */
+import firebase from '../firebase';
+
+/*
  * Import components
  */
 import RecordsContainer from './records-container';
 import AccountContainer from './account-container';
-
-
-const firebase = Rebase.createClass({
-  apiKey: "AIzaSyAkkEqs6WSSSDX2QdXVT0S-MSlT7ohnpPM",
-  authDomain: "react-discogs.firebaseapp.com",
-  databaseURL: "https://react-discogs.firebaseio.com",
-});
 
 class App extends React.Component {
 	constructor() {
@@ -57,11 +55,18 @@ class App extends React.Component {
 		this.setState({ wishlist: wishlist });
 	}
 
+	removeFromWishlist(key) {
+		let wishlist = this.state.wishlist;
+		wishlist[key] = null;
+		this.setState({ wishlist: wishlist });
+
+	}
+
 	render () {
 		return (
 			<div className="row">
 				<RecordsContainer records={this.state.records} triggerAddToWishlist={(item) => this.addToWishlist(item)} />
-				<AccountContainer wishlist={this.state.wishlist} triggerAddToWishlist={(item) => this.addToWishlist(item)} />
+				<AccountContainer wishlist={this.state.wishlist} triggerRemoveFromWishlist={(id) => this.removeFromWishlist(id)} />
 			</div>
 		)
 	}

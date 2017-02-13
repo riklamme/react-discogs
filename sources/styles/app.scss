@@ -4,11 +4,15 @@
 
 
 $brand-primary:             $blue;
+$brand-secondary:           #636c72;
 $brand-success:             $green;
 $brand-info:                $teal;
 $brand-warning:             $orange;
 $brand-danger:              $red;
 $brand-inverse:             $gray-dark;
+
+$btn-secondary-border: $brand-secondary;
+$btn-secondary-color: $brand-secondary;
 
 $body-bg:       $gray-dark;
 $body-color:    $gray-dark;
@@ -128,6 +132,16 @@ body {
 
 .account-container > h3 {
   color:white;
+}
+
+.btn-outline-secondary {
+  color: $btn-secondary-color;
+  border-color: $btn-secondary-border;
+}
+
+.btn-outline-secondary:hover {
+  background-color: $btn-secondary-color;
+  border-color: $btn-secondary-border;
 }
 
 footer {

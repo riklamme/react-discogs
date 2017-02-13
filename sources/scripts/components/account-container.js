@@ -12,7 +12,7 @@ class AccountContainer extends React.Component {
 		const record = this.props.wishlist[key];
 		
 		return (
-			<RecordList key={record.id} recordId={record.id} record={record} />
+			<RecordList key={record.id} recordId={record.id} record={record} triggerRemoveFromWishlist={(id) => this.props.triggerRemoveFromWishlist(id)}  />
 		)
 	}
 
