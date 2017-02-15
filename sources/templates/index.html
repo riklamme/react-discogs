@@ -7,6 +7,21 @@
     <title>Discogs React</title>
     <link rel="stylesheet" href="resources/styles/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/9cb1224b58.css">
+    <script>
+        if ('serviceWorker' in navigator){
+            // console.log("SW present !!! ");
+
+            navigator.serviceWorker.register('worker.js', {
+              //scope: '/toto/'
+            }).then(function(registration){
+              // console.log('Service worker registered : ', registration.scope);
+            })
+            .catch(function(err){
+              // console.log("Service worker registration failed : ", err);
+            });
+
+          }
+    </script>
 </head>
 
 <body>
@@ -38,25 +53,12 @@
             </button>
         </div>
     </div>
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Discogs React</h1>
-            <p class="lead text-muted">A simple boilerplate for web apps with React, Babel, and Rollup</p>
-            <!-- <p>
-                <a href="#" class="btn btn-primary">Main call to action</a>
-                <a href="#" class="btn btn-secondary">Secondary action</a>
-            </p> -->
-        </div>
-    </section>
-    <div class="album text-muted">
-        <div class="container">
 
-            <!-- React -->
-            <main id="app"></main>
-            <!-- ./React -->
 
-        </div>
-    </div>
+    <!-- React -->
+    <main id="app"></main>
+    <!-- ./React -->
+
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
@@ -68,12 +70,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
-    <script>
-      $(function () {
-        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
-      });
-    </script>
     <!-- React js -->
     <script src="resources/scripts/bundle.js"></script>
     <!-- ./React js -->
